@@ -40,23 +40,19 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
   border-width: 1px 0;
 }
+
+.c-divider {
+  height: 120rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-width: 1px 0;
+}
+
 .carosel {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-
-/* .carousel-control-next-icon {
-  width: 10px;
-  height: 10px;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
-} */
-
-
-.carousel-control-next-icon path {
-  color: rgba(255, 0, 0, 0.1);
 }
 
 
