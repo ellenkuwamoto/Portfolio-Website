@@ -24,7 +24,21 @@ $(function () {
     $("img#interactiveWorksThumbnail").attr("src", "images/interactiveWorksThumbnail.jpeg");
   })
 
+  $("img#cellularSoundsThumbnail").mouseover(function () {
+    $("img#cellularSoundsThumbnail").attr("src", "images/cellularSoundsThumbnailHover.jpeg");
+  })
+  
+  $("img#cellularSoundsThumbnail").mouseout(function () {
+    $("img#cellularSoundsThumbnail").attr("src", "images/cellularSoundsThumbnail.jpeg");
+  })
 
+  $("img#slimeMoldScreenThumbnail").mouseover(function () {
+    $("img#slimeMoldScreenThumbnail").attr("src", "images/slimeMoldScreenThumbnailHover.jpeg");
+  })
+  
+  $("img#slimeMoldScreenThumbnail").mouseout(function () {
+    $("img#slimeMoldScreenThumbnail").attr("src", "images/slimeMoldScreenThumbnail.jpeg");
+  })
 
 
 })
