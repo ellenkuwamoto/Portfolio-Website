@@ -3,7 +3,7 @@
   <head>
     <title>Ellen Kuwamoto Portfolio</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -11,6 +11,59 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .thumbnail-container {
+        position: relative;
+        overflow: hidden;
+        max-width: 80%; /* Adjust this value as needed */
+        margin: auto; /* Center the thumbnails if needed */
+      }
+
+      .thumbnail-container img {
+        width: 100%;
+        display: block;
+        object-fit: cover; /* This ensures the image fills the space proportionally */
+      }
+
+      .thumbnail-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .thumbnail-container:hover .thumbnail-overlay {
+        opacity: 1;
+      }
+
+      .thumbnail-overlay p {
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+      }
+    </style>
   </head>
 
   <body>
@@ -19,31 +72,93 @@
         <div class="navbar-nav">
           <a class="navbar-brand" href="index.html">ELLEN KUWAMOTO</a>
           <a class="nav-item nav-link" href="about.html">About</a>
+          <a class="nav-item nav-link" href="index.html">3D Work</a>
+          <a class="nav-item nav-link" href="creativeCoding.html">Creative Coding</a>
         </div>
       </nav>
       <div class="a-divider"></div>
       <main>
         <div class="grid-container">
-          <a href="2DWorks.html">
+          <a href="OrganicLamp.html" class="thumbnail-container">
             <img
-              id="2DWorksThumbnail"
-              src="images/2DWorksThumbnail.jpg"
-              alt="2D works thumbnail "
+              id="OrganicLampThumbnail"
+              src="images/OrganicLampThumbnail.png"
+              alt="Organic Lamp thumbnail"
             />
+            <div class="thumbnail-overlay">
+              <p>Organic Lamp</p>
+            </div>
           </a>
-          <a href="3DWorks.html">
+          <a href="ModularTable.html" class="thumbnail-container">
             <img
-              id="3DWorksThumbnail"
-              src="images/3DWorksThumbnail.JPG"
-              alt="3D works thumbnail "
+              id="ModularTableThumbnail"
+              src="images/ModularTableThumbnail.png"
+              alt="Modular Table thumbnail"
             />
+            <div class="thumbnail-overlay">
+              <p>Modular Table</p>
+            </div>
           </a>
-          <a href="interactiveWorks.html">
+          <a href="BehindTheSilkScreen.html" class="thumbnail-container">
             <img
-              id="interactiveWorksThumbnail"
-              src="images/interactiveWorksThumbnail.jpeg"
-              alt="interactive works thumbnail "
+              id="newWorksThumbnail"
+              src="images/BehindTheSilkScreenDoorThumbnail.png"
+              alt="Behind The Silk Screen thumbnail"
             />
+            <div class="thumbnail-overlay">
+              <p>Behind The Silk Screen</p>
+            </div>
+          </a>
+      
+          <a href="WindBone.html" class="thumbnail-container">
+            <img
+              id="WindBoneThumbnail"
+              src="images/WindBoneThumbnail.png"
+              alt="Wind Bone thumbnail"
+            />
+            <div class="thumbnail-overlay">
+              <p>Wind Bone</p>
+            </div>
+          </a>
+          <a href="ElephantTree.html" class="thumbnail-container">
+            <img
+              id="ElephantTreeThumbnail"
+              src="images/ElephantTreeThumbnail.png"
+              alt="Elephant Tree thumbnail"
+            />
+            <div class="thumbnail-overlay">
+              <p>Elephant Tree</p>
+            </div>
+          </a>
+          <a href="BlowUpBunny.html" class="thumbnail-container">
+            <img
+              id="BlowUpBunnyThumbnail"
+              src="images/BlowUpBunnyThumbnail.png"
+              alt="Blow Up Bunny thumbnail"
+            />
+            <div class="thumbnail-overlay">
+              <p>Blow Up Bunny</p>
+            </div>
+          </a>
+          <a href="AnthillGlobs.html" class="thumbnail-container">
+            <img
+              id="AnthillGlobsThumbnail"
+              src="images/AnthillGlobsThumbnail.png"
+              alt="Anthill Globs thumbnail"
+            />
+            <div class="thumbnail-overlay">
+              <p>Anthill Globs</p>
+            </div>
+          </a>
+          <a href="AncientBot.html" class="thumbnail-container">
+            <img
+              id="AncientBotThumbnail"
+              src="images/AncientBotThumbnail.png"
+              alt="Installation Concept Series thumbnail"
+            />
+            <div class="thumbnail-overlay">
+              <p>Ancient Bot</p>
+            </div>
           </a>
         </div>
       </main>
