@@ -13,85 +13,101 @@
     <script type="text/javascript" src="js/main.js"></script>
 
     <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      @media (max-width: 768px) {
         .grid-container {
-          grid-template-columns: 1fr;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); /* 3 per row for large screens */
+          gap: 20px;
         }
-      }
+      
+        @media (max-width: 992px) {
+          .grid-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 per row for medium screens */
+          }
+        }
+      
+        @media (max-width: 768px) {
+          .grid-container {
+            grid-template-columns: 1fr; /* 1 per row for small screens */
+          }
+        }
+      
+        .thumbnail-container {
+          position: relative;
+          overflow: hidden;
+          max-width: 100%;
+          margin: auto;
+          cursor: pointer;
+        }
+      
+        .thumbnail-container img {
+          width: 100%;
+          display: block;
+          object-fit: cover;
+          transition: opacity 0.3s ease;
+        }
+      
+        /* Hide image on hover */
+        .thumbnail-container:hover img {
+          opacity: 0;
+        }
+      </style>
+      
 
-      .thumbnail-container {
-        position: relative;
-        overflow: hidden;
-        max-width: 80%; /* Adjust this value as needed */
-        margin: auto; /* Center the thumbnails if needed */
-      }
-
-      .thumbnail-container img {
-        width: 100%;
-        display: block;
-        object-fit: cover; /* This ensures the image fills the space proportionally */
-      }
-
-      .thumbnail-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .thumbnail-container:hover .thumbnail-overlay {
-        opacity: 1;
-      }
-
-      .thumbnail-overlay p {
-        font-size: 18px;
-        color: black;
-        font-weight: bold;
-        text-align: center;
-        margin: 0;
-      }
-    </style>
   </head>
 
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-sm">
         <div class="navbar-nav">
-          <a class="navbar-brand" href="index.html">*Site under construction come back soon* ELLEN KUWAMOTO</a>
-          <a class="nav-item nav-link" href="work.html">Work</a>
-          <a class="nav-item nav-link" href="about.html">About</a>
+          <span class="navbar-brand no-interaction">ELLEN KUWAMOTO</span>
+          <a class="nav-item nav-link" href="index.html"> Work</a>
+           <a class="nav-item nav-link" href="about.html">About</a>
         </div>
       </nav>
       <div class="a-divider"></div>
       <main>
         <div class="grid-container">
-          <a href="DeadDogu.html" class="thumbnail-container">
-            <img 
-            id="DeadDoguThumbnail" 
-            src="images/DeadDoguThumbnail.png" 
-            alt="Dead Dogu thumbnail" />
-            <div class="thumbnail-overlay">
-              <p>Dead Dogu</p>
-            </div>
+          <a href="work001.html" class="thumbnail-container">
+            <img id="work001Thumbnail" src="images/work-001-v1.webp" alt="Work 001 thumbnail" />
+          </a>
+          <a href="work002.html" class="thumbnail-container">
+            <img id="work002Thumbnail" src="images/work-002-v1.webp" alt="Work 002 thumbnail" />
+          </a>
+          <a href="work003.html" class="thumbnail-container">
+            <img id="work003Thumbnail" src="images/work-003-v1.webp" alt="Work 003 thumbnail" />
+          </a>
+          <a href="work004.html" class="thumbnail-container">
+            <img id="work004Thumbnail" src="images/work-004-v1.webp" alt="Work 004 thumbnail" />
+          </a>
+          <a href="work005.html" class="thumbnail-container">
+            <img id="work005Thumbnail" src="images/work-005-v1.webp" alt="Work 005 thumbnail" />
+          </a>
+          <a href="work006.html" class="thumbnail-container">
+            <img id="work006Thumbnail" src="images/work-006-v1.webp" alt="Work 006 thumbnail" />
+          </a>
+          <a href="work007.html" class="thumbnail-container">
+            <img id="work007Thumbnail" src="images/work-007-v1.webp" alt="Work 007 thumbnail" />
+          </a>
+          <a href="work008.html" class="thumbnail-container">
+            <img id="work008Thumbnail" src="images/work-008-v1.webp" alt="Work 008 thumbnail" />
+          </a>
+          <a href="work009.html" class="thumbnail-container">
+            <img id="work009Thumbnail" src="images/work-009-v1.webp" alt="Work 009 thumbnail" />
+          </a>
+          <a href="work010.html" class="thumbnail-container">
+            <img id="work010Thumbnail" src="images/work-010-v1.webp" alt="Work 010 thumbnail" />
+          </a>
+          <a href="work011.html" class="thumbnail-container">
+            <img id="work011Thumbnail" src="images/work-011-v1.webp" alt="Work 011 thumbnail" />
+          </a>
+          <a href="work012.html" class="thumbnail-container">
+            <img id="work012Thumbnail" src="images/work-012-v1.webp" alt="Work 012 thumbnail" />
           </a>
         </div>
       </main>
       <div class="b-divider"></div>
       <footer>
-        <p>Contact: ellenkuwamoto@gmail.com</p>
+        <p>Contact: ellenkuwamoto@gmail.com, efk9495@nyu.edu</p>
       </footer>
     </div>
   </body>

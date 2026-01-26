@@ -15,6 +15,14 @@ a:hover {
   font-weight: bold;
 }
 
+.no-interaction {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+}
+
 a:visited {
   color: #343434;
 }
@@ -82,4 +90,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.about-wrapper {
+  max-width: 1100px;   /* sweet spot for image + text */
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .about-wrapper {
+    max-width: 1200px;
+  }
 }
