@@ -92,13 +92,3 @@ footer {
   align-items: center;
 }
 
-.about-wrapper {
-  max-width: 1100px;   /* sweet spot for image + text */
-  margin: 0 auto;
-}
-
-@media (min-width: 1400px) {
-  .about-wrapper {
-    max-width: 1200px;
-  }
-}

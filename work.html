@@ -1,1 +1,116 @@
-not using rn
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ellen Kuwamoto Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <style>
+           .navbar {
+        position: relative;
+        z-index: 1000;
+      }
+    
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+      }
+    
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+    
+        position: relative;
+        z-index: 1001;
+      }
+    
+      .navbar-brand {
+        width: 165px;
+      }
+    
+      .navbar-nav .nav-link {
+        width: 65px;
+      }
+    
+      .navbar-brand:hover,
+      .navbar-nav .nav-link:hover {
+        font-weight: bold;
+      }
+    
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      /* Full homepage fits exactly within screen */
+      .homepage {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Image fills remaining available space */
+      main {
+        flex: 1;
+        min-height: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+      }
+
+      .homepage-image {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container homepage">
+
+      <nav class="navbar navbar-expand-sm">
+        <div class="navbar-nav">
+          <a class="navbar-brand" href="index.html">ELLEN KUWAMOTO</a>
+          <a class="nav-item nav-link" href="work.html">Work</a>
+          <a class="nav-item nav-link" href="about.html">About</a>
+        </div>
+      </nav>
+
+      <div class="a-divider"></div>
+
+      <main>
+        <p>
+           under construction
+          </p>
+
+      </main>
+
+      <div class="b-divider"></div>
+
+    </div>
+
+  </body>
+</html>

@@ -8,52 +8,298 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
+
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
+    <style>
+      /* =========================
+         NAVBAR
+         ========================= */
+    
+      .navbar {
+        position: relative;
+        z-index: 1000;
+      }
+    
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+      }
+    
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
+    
+        position: relative;
+        z-index: 1001;
+      }
+    
+      .navbar-brand {
+        width: 165px;
+      }
+    
+      .navbar-nav .nav-link {
+        width: 65px;
+      }
+    
+      .navbar-brand:hover,
+      .navbar-nav .nav-link:hover {
+        font-weight: bold;
+      }
+    
+    
+      /* =========================
+         GENERAL
+         ========================= */
+    
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .about-image {
+        width: 70%;
+        height: auto;
+      }
+    
+      .about-text {
+        font-family: 'Avenir Next', Avenir, sans-serif; 
+        line-height: 1.6;
+        color: #505050;
+    /* color: #000000;*/
+      }
+    
+      .about-text p {
+        font-family: 'Avenir Next', Avenir, sans-serif; 
+        margin-bottom: 1.25rem;
+        color: #505050;
+       /* color: #000000;*/
+      }
+    
+    
+      /* =========================
+         DESKTOP
+         ========================= */
+    
+      @media (min-width: 992px) {
+    
+        main.py-5 {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+    
+        .about-wrapper {
+          width: 100%;
+          transform: translateX(-25px);
+        }
+    
+        .about-wrapper > .row {
+          align-items: flex-start;
+        }
+    
+        .image-container {
+          height: 100vh;
+    
+          position: sticky;
+          top: 0;
+    
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    
+          /*
+            Keep sticky image underneath navbar.
+          */
+          z-index: 1;
+        }
+    
+        .about-image {
+          width: 70%;
+          height: auto;
+          transform: none;
+        }
+    
+        .about-text {
+          padding-top: var(--image-top, 0px);
+          padding-bottom: var(--image-top, 0px);
+    
+          position: relative;
+          z-index: 1;
+        }
+      }
+    
+    
+      /* =========================
+         SMALL / STACKED
+         ========================= */
+    
+      @media (max-width: 991.98px) {
+    
+        .image-container {
+          position: static;
+          height: auto;
+    
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    
+          width: 100%;
+        }
+    
+        .about-image {
+          width: 70%;
+          height: auto;
+    
+          transform: translateY(25px);
+    
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+    
+        .about-text {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-sm ">
+
+      <!-- NAVIGATION -->
+      <nav class="navbar navbar-expand-sm">
         <div class="navbar-nav">
-          <span class="navbar-brand no-interaction">ELLEN KUWAMOTO</span>
-         <a class="nav-item nav-link" href="index.html">Work</a>
-           <a class="nav-item nav-link" href="about.html">About</a>   
-   
-          </div>
+          <a class="navbar-brand" href="index.html">ELLEN KUWAMOTO</a>
+          <a class="nav-item nav-link" href="work.html">Work</a>
+          <a class="nav-item nav-link" href="about.html">About</a>
+        </div>
       </nav>
 
+      <!-- ABOUT -->
       <main class="py-5">
         <div class="row justify-content-center px-4">
           <div class="about-wrapper">
-            <div class="row flex-lg-row-reverse align-items-center g-5">
-              
-              <div class="col-12 col-sm-8 col-lg-6">
+
+            <div class="row g-5">
+
+              <!-- IMAGE -->
+              <div class="col-12 col-sm-8 col-lg-6 image-container">
                 <img
                   src="images/headshot.png"
-                  class="img-fluid"
-                  alt="headshot"
+                  class="img-fluid about-image"
+                  alt="Ellen Kuwamoto"
                   loading="lazy"
-                >
+                />
               </div>
-      
-              <div class="col-lg-6">
-                <h1 class="display-5 fw-bold mb-3">Who I Am</h1>
-                <p class="lead">I was born and raised in San Francisco and moved to New York to pursue an engineering degree. 
-                 While studying, I became increasingly drawn to learning about my cultural background and decided to switch to an art degree.
-                 I am fascinated by spiritual statues, collectible figurines, and all kinds of beautiful things.
-                 Making art is a way for me to see the creatures from my imagination. </p>
+    
+              <!-- TEXT -->
+              <div class="col-lg-6 about-text">
+
+                <p>
+                  Ellen Kuwamoto is an artist working between the world as she imagines it and
+                  the awkward reality she inhabits. Her paintings depict simple yet lifelike
+                  figures with oversized features that evoke nostalgia for children’s
+                  cartoons, their frozen, outward gaze pulling the viewer into atmospheric and
+                  often moody environments. Recognizable elements such as clothing logos give
+                  unexpected context to these dreamlike scenes. Her multimedia work carries
+                  this same thread across sculpture and digital imagery populated with objects
+                  from everyday life. Toys, soda, and phones are incorporated into 
+                  inventive and uncanny characters, giving form to the associations and
+                  personalities projected onto familiar things. Throughout, her work is bold and
+                  sometimes flashy, while equally sensitive and contained.
+                </p>
+              
+                <p>
+                  Ellen’s style is informed by her mixed Japanese American heritage and an
+                  ongoing interest in East Asian philosophy, folklore, and ancient art. Having
+                  grown up in San Francisco with a sense of her cultural history being just out
+                  of reach, she is drawn to studying these older worldviews and questioning what
+                  remains relevant. The careful depiction of contemporary symbols throughout
+                  her work reflects a similar level of scrutiny toward ever-changing American
+                  culture and a tendency to approach her surroundings with curiosity rather
+                  than taking them at face value.
+                </p>
+              
+                <p>
+                  Now based in Brooklyn, Ellen earned her BFA with honors in Interactive Media
+                  Arts and a minor in Studio Art from NYU Tisch in 2026. She was selected for
+                  NYU Shanghai’s Porcelain Capital Immersion Study in China, where her work was
+                  exhibited at the Luxun Gallery. She also completed a Concentration in Art
+                  Business at Sotheby’s Institute of Art in London. Her experience working at a
+                  3D fabrication studio, photo lab, gallery, and ceramics studio has further
+                  deepened her curiosity about the ways images and objects are made, circulated,
+                  and given meaning.
+                </p>
+              
+
               </div>
-      
+
             </div>
           </div>
         </div>
       </main>
-      
-      <footer>
-        <p>Contact: ellenkuwamoto@gmail.com, efk9495@nyu.edu</p>
-      </footer>
+
     </div>
-</body>
+
+    <script>
+      function alignPage() {
+        const image = document.querySelector(".about-image");
+        const text = document.querySelector(".about-text");
+
+        if (window.innerWidth >= 992) {
+
+          /*
+            Find the exact amount of blank space
+            above the vertically centered image.
+          */
+          const imageTop =
+            (window.innerHeight - image.offsetHeight) / 2;
+
+          /*
+            Use that same measurement above AND
+            below the text.
+          */
+          text.style.setProperty(
+            "--image-top",
+            imageTop + "px"
+          );
+
+        } else {
+          text.style.removeProperty("--image-top");
+        }
+      }
+
+      const image = document.querySelector(".about-image");
+
+      /* Run after image dimensions are available */
+      if (image.complete) {
+        alignPage();
+      } else {
+        image.addEventListener("load", alignPage);
+      }
+
+      /* Recalculate when window size changes */
+      window.addEventListener("resize", alignPage);
+    </script>
+
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
